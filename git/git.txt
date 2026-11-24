@@ -1,0 +1,19 @@
+Create a repository named Campus-Trainings on https://git.epam.com/. Now, you need to create a new branch named develop where you'll work on adding a README.md file. After adding content to the README.md, commit the changes to the develop branch. Finally, merge these changes to the main branch to update the repository with your new additions.
+
+Instructions:
+
+Your Sequence of GIT commands must start with Checking out a new branch named develop and end with merging the changes to the main branch.
+While adding the file to git specify the filename(filename given in the above Scenario)
+During the commit, specify the commit message as "Adding README.md with initial content"
+Use the above instructions when utilizing the Git commands to ensure the solution meets 100%.
+
+Note: In the soultion box, you need to provide the commands used for completing the task for evaluation.
+
+Solution:
+
+git checkout -b develop
+echo "Initialize README.md file" > README.md
+git add README.md
+git commit -m "Adding README.md with initial content" 
+git checkout main
+git merge develop
