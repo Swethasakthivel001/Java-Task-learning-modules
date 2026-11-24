@@ -1,0 +1,59 @@
+Setting Up a Maven Project for Payroll Management
+
+Objective:
+
+The goal of this task is to help junior engineers learn how to create and configure a Maven Java project, understand its folder structure, and execute important Maven lifecycle commands (compile, test, package). By the end of the task, they will understand how to verify that a Maven project is set up correctly and ready for further development.
+
+Use Case:
+
+You are developing a Payroll Management System that calculates employee salaries based on inputs such as basic pay, bonuses, and deductions. To get started, you need to set up the project using Maven. This includes generating the project structure, adding dependencies, and ensuring it compiles, runs tests, and packages correctly.
+
+Instructions:
+
+Step 1: Generate a Maven Project
+
+- Create the project using terminal or IDE with name "payroll-management".
+- Navigate to the newly created project directory
+Step 2: Understand the Folder Structure
+
+After generating the project, examine the structure:
+
+src/main/java: For your application source code.
+src/test/java: For unit test files.
+pom.xml: Maven's configuration file where dependencies, build plugins, and project metadata are defined.
+Step 3: Update the pom.xml
+
+Open the pom.xml file in your preferred editor.
+Verify the following key sections:
+    Project coordinates: Ensure the groupId, artifactId, and version are correct.
+    Dependencies: Add dependencies for the tools and libraries your project requires, e.g., JUnit for testing.
+Step 4: Execute Basic Maven Commands
+
+Run these commands to verify the project is set up correctly:
+
+- Compile the Project: Compile the source code to check for syntax errors
+- Run Tests: Execute unit tests to verify that the code behaves as expected
+- Package the Application: Package the compiled code into a distributable format (JAR file)
+Step 5: Verify the Setup
+
+- After Building(packaging) your application, navigate to the target directory
+- Check that a JAR file with your project name is present (e.g., payroll-management-1.0-SNAPSHOT.jar).
+Note : In the solution box, provide the maven commands which you have executed in a sequential order for evaluation.
+
+Additional Learning Tasks:
+
+Modify the Project: Add a custom dependency (e.g., Apache Commons Lang) to learn how Maven resolves external libraries.
+
+Explore Plugins: Add the maven-jar-plugin to customize how the JAR file is packaged.
+
+
+Solution:
+
+mvn archetype:generate -DgroupId=com.payroll -DartifactId=payroll-management -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+cd payroll-management
+mvn clean
+mvn validate
+mvn compile
+mvn test
+mvn package
+jar tf target/payroll-management-1.0-SNAPSHOT.jar
